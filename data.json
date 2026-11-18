@@ -11,8 +11,14 @@
       "d": "18/11/2026",
       "n": "haikal Nominal: Rp2.000 Kanal: QRIS Kode konfirmasi: TSA-1811-245 Waktu: 18/11/2026 12.12",
       "a": 22000
+    },
+    {
+      "c": "TSA-1811-765",
+      "d": "18/11/2026",
+      "n": "dolah Nominal: Rp10.000 Kanal: QRIS Kode konfirmasi: TSA-1811-765 Waktu: 18/11/2026 17.38",
+      "a": 10000
     }
   ],
   "out": [],
-  "updated": 1794982497813
+  "updated": 1794998345551
 }
