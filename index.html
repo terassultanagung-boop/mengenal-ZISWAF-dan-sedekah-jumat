@@ -263,7 +263,7 @@ body.lock{overflow:hidden}
 .editing .ts table{min-width:700px}
 .ts input{width:100%;min-width:70px;font:inherit;padding:6px 8px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--ink)}
 .ts input[type=number]{text-align:right;min-width:90px}
-button.dl{font:inherit;cursor:pointer;border:0;background:none;color:#b3261e;font-weight:700;padding:4px 8px}
+button.dl{font:inherit;cursor:pointer;border:0;background:none;color:#b3261e;font-weight:700;padding:4px 8px}.editing .ts td:last-child,.editing .ts th:last-child{position:sticky;right:0;background:var(--sf);box-shadow:-8px 0 8px -8px rgba(0,0,0,.25)}button.dl{white-space:nowrap}
 @media (prefers-reduced-motion:reduce){.mdl,.mdl-box,.zwp,.tp,.dn-btn{animation:none}}
 [hidden]{display:none!important}
 .qimg{width:min(100%,340px);height:auto;border-radius:14px;border:1px solid var(--ln);background:#fff}
@@ -608,7 +608,7 @@ function ok(c){return!!c&&L.in.some(function(r){return r.c===c})}
 function el(t,cls,txt){var e=document.createElement(t);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
 function td(child,cls){var c=el("td",cls);if(typeof child==="string")c.textContent=child;else if(child)c.appendChild(child);return c}
 function inp(o,k,type){var i=el("input");i.type=type||"text";i.value=o[k]==null?"":o[k];if(type==="number")i.min="0";i.setAttribute("aria-label",k);i.addEventListener("input",function(){o[k]=type==="number"?(parseInt(i.value,10)||0):i.value;changed()});return i}
-function del(arr,i,re){var b=el("button","dl","✕");b.type="button";b.setAttribute("aria-label","Hapus baris");b.addEventListener("click",function(){arr.splice(i,1);changed();re()});return b}
+function del(arr,i,re){var b=el("button","dl","✕ Hapus");b.type="button";b.setAttribute("aria-label","Hapus baris");b.addEventListener("click",function(){if(!window.confirm("Hapus baris ini?"))return;arr.splice(i,1);changed();re()});return b}
 function renderIn(){var b=$("tin");b.innerHTML="";
 L.in.forEach(function(r,i){var tr=el("tr");
 if(EDIT){tr.appendChild(td(inp(r,"c")));tr.appendChild(td(inp(r,"d")));tr.appendChild(td(inp(r,"n")));tr.appendChild(td("✓ Terverifikasi","ok"));tr.appendChild(td(inp(r,"a","number"),"n"));tr.appendChild(td(del(L.in,i,renderIn)))}
