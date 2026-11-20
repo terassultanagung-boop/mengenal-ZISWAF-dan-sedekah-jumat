@@ -35,8 +35,27 @@
       "d": "19/11/2026",
       "n": "Herudin",
       "a": 50000
+    },
+    {
+      "c": "TSA-2011-461",
+      "d": "20/11/2026",
+      "n": "Jazariyah Nominal: Rp20.000 Kanal: QRIS Kode konfirmasi: TSA-2011-461 Waktu: 20/11/2026 16.28",
+      "a": 30000
     }
   ],
-  "out": [],
-  "updated": 1795094827629
+  "out": [
+    {
+      "d": "20/11/2026",
+      "p": "Penyaluran",
+      "r": "nasi ayam 12 porsi",
+      "a": 120000
+    },
+    {
+      "d": "20/11/2026",
+      "p": "Penyaluran",
+      "r": "air mineral 15 gelas",
+      "a": 15000
+    }
+  ],
+  "updated": 1795167313681
 }
